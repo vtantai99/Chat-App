@@ -1,0 +1,33 @@
+import { Spin } from 'antd'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from 'FirebaseConfig/config'
+import React, { createContext, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ROUTES_NAME } from 'Routes/constant'
+
+export const AuthContext = createContext()
+
+const AuthProvider = ({ children }) => {
+  const navigate = useNavigate()
+  const [user, setUser] = useState({})
+  console.log('Boy 🚀 ~ file: AuthProvider.js ~ line 13 ~ AuthProvider ~ user', user)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const { displayName, email, uid, photoURL } = user
+        setUser({ displayName, email, uid, photoURL })
+        setIsLoading(false)
+        navigate(ROUTES_NAME.CHAT_ROOM)
+      } else {
+        navigate(ROUTES_NAME.LOGIN)
+      }
+    })
+    return () => unsubscribe()
+  }, [navigate])
+
+  return <AuthContext.Provider value={user}>{isLoading ? <Spin /> : children}</AuthContext.Provider>
+}
+
+export default AuthProvider

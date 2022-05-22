@@ -1,10 +1,8 @@
 import React from 'react'
-import { LoginScreen } from './components'
+import AppRoute from 'Routes'
 
 function App() {
-  return (
-    <LoginScreen />
-  )
+  return <AppRoute />
 }
 
 export default App
