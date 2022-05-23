@@ -1,17 +1,19 @@
-import { Collapse, Typography } from 'antd'
+import { PlusOutlined } from '@ant-design/icons'
+import { Button, Collapse } from 'antd'
 import React from 'react'
-
-const { Panel } = Collapse
-const { Link } = Typography
+import { LinkStyled, PanelStyled } from './styled'
 
 const Rooms = () => {
   return (
-    <Collapse>
-      <Panel header="Room list" key="1">
-        <Link>Room 1</Link>
-        <Link>Room 2</Link>
-        <Link>Room 3</Link>
-      </Panel>
+    <Collapse ghost defaultActiveKey={['1']}>
+      <PanelStyled header="Room list" key="1">
+        <LinkStyled>Room 1</LinkStyled>
+        <LinkStyled>Room 2</LinkStyled>
+        <LinkStyled>Room 3</LinkStyled>
+        <Button type="text" icon={<PlusOutlined />} className="add__room">
+          Add room
+        </Button>
+      </PanelStyled>
     </Collapse>
   )
 }

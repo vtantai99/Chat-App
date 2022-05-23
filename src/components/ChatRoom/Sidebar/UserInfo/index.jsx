@@ -7,11 +7,11 @@ const { Text } = Typography
 const UserInfo = () => {
   return (
     <UserWrapper>
-      <div>
+      <div className="user__info">
         <Avatar>userAvatar</Avatar>
-        <Text>Tai Vo</Text>
+        <Text className="user__name">Tai Vo</Text>
       </div>
-      <Button>Log out</Button>
+      <Button ghost>Log out</Button>
     </UserWrapper>
   )
 }
