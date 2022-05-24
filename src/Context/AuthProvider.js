@@ -10,7 +10,6 @@ export const AuthContext = createContext()
 const AuthProvider = ({ children }) => {
   const navigate = useNavigate()
   const [user, setUser] = useState({})
-  console.log('Boy 🚀 ~ file: AuthProvider.js ~ line 13 ~ AuthProvider ~ user', user)
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
@@ -20,9 +19,11 @@ const AuthProvider = ({ children }) => {
         setUser({ displayName, email, uid, photoURL })
         setIsLoading(false)
         navigate(ROUTES_NAME.CHAT_ROOM)
-      } else {
-        navigate(ROUTES_NAME.LOGIN)
+        return
       }
+
+      setIsLoading(false)
+      navigate(ROUTES_NAME.LOGIN)
     })
     return () => unsubscribe()
   }, [navigate])

@@ -1,13 +1,24 @@
 import { Row, Col, Typography, Button } from 'antd'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, facebookProvider } from 'FirebaseConfig/config'
+import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
+import { addDocument } from 'FirebaseConfig/services'
 import React from 'react'
 
 const { Title } = Typography
 
 const LoginScreen = () => {
-  const handleFacebookLogin = () => {
-    signInWithPopup(auth, facebookProvider)
+  const handleFacebookLogin = async () => {
+    const { user, _tokenResponse } = await signInWithPopup(auth, facebookProvider)
+    if (_tokenResponse?.isNewUser) {
+      addDocument(DB_FIRE_STORE.USERS, {
+        displayName: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+        uid: user.uid,
+        providerId: _tokenResponse.providerId
+      })
+    }
   }
 
   return (
