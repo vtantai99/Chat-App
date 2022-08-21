@@ -28,7 +28,7 @@ const AuthProvider = ({ children }) => {
     return () => unsubscribe()
   }, [navigate])
 
-  return <AuthContext.Provider value={user}>{isLoading ? <Spin /> : children}</AuthContext.Provider>
+  return <AuthContext.Provider value={{ user }}>{isLoading ? <Spin /> : children}</AuthContext.Provider>
 }
 
 export default AuthProvider

@@ -1,3 +1,4 @@
 export const DB_FIRE_STORE = {
-  USERS: 'users'
+  USERS: 'users',
+  ROOMS: 'rooms'
 }

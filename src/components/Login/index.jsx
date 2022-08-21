@@ -2,7 +2,7 @@ import { Row, Col, Typography, Button } from 'antd'
 import { signInWithPopup } from 'firebase/auth'
 import { auth, facebookProvider } from 'FirebaseConfig/config'
 import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
-import { addDocument } from 'FirebaseConfig/services'
+import { addDocument, generateKeywords } from 'FirebaseConfig/services'
 import React from 'react'
 
 const { Title } = Typography
@@ -16,7 +16,8 @@ const LoginScreen = () => {
         email: user.email,
         photoURL: user.photoURL,
         uid: user.uid,
-        providerId: _tokenResponse.providerId
+        providerId: _tokenResponse.providerId,
+        keywords: generateKeywords(user.displayName)
       })
     }
   }
