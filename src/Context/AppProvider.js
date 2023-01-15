@@ -1,5 +1,5 @@
-import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
-import { useFireStore } from 'Hooks'
+import { DB_FIRE_STORE } from 'firebaseConfig/constans'
+import { useFireStore } from 'hooks'
 import { createContext, useContext, useMemo, useState } from 'react'
 import { AuthContext } from './AuthProvider'
 

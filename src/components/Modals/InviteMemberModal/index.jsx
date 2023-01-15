@@ -1,9 +1,9 @@
 import { Avatar, Form, Modal, Select, Spin } from 'antd'
-import { AppContext } from 'Context/AppProvider'
-import { AuthContext } from 'Context/AuthProvider'
+import { AppContext } from 'context/AppProvider'
+import { AuthContext } from 'context/AuthProvider'
 import { collection, doc, getDocs, limit, orderBy, query, where } from 'firebase/firestore'
-import { db } from 'FirebaseConfig/config'
-import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
+import { db } from 'firebaseConfig/config'
+import { DB_FIRE_STORE } from 'firebaseConfig/constans'
 import { debounce } from 'lodash'
 import { useContext, useMemo, useState } from 'react'
 const { Option } = Select

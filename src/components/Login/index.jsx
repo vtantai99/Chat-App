@@ -1,8 +1,8 @@
 import { Row, Col, Typography, Button } from 'antd'
 import { signInWithPopup } from 'firebase/auth'
-import { auth, facebookProvider } from 'FirebaseConfig/config'
-import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
-import { addDocument, generateKeywords } from 'FirebaseConfig/services'
+import { auth, facebookProvider } from 'firebaseConfig/config'
+import { DB_FIRE_STORE } from 'firebaseConfig/constans'
+import { addDocument, generateKeywords } from 'firebaseConfig/services'
 import React from 'react'
 
 const { Title } = Typography

@@ -1,9 +1,9 @@
 import { Spin } from 'antd'
 import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from 'FirebaseConfig/config'
+import { auth } from 'firebaseConfig/config'
 import React, { createContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { ROUTES_NAME } from 'Routes/constant'
+import { ROUTES_NAME } from 'routeConfig/constant'
 
 export const AuthContext = createContext()
 

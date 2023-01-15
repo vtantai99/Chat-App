@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
-import AuthProvider from 'Context/AuthProvider'
-import { ThemeGlobalStyle, ThemeProvider } from 'Themes'
+import AuthProvider from 'context/AuthProvider'
+import { ThemeGlobalStyle, ThemeProvider } from 'theme'
 import App from 'App'
-import AppProvider from 'Context/AppProvider'
+import AppProvider from 'context/AppProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

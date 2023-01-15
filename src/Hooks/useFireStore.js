@@ -1,9 +1,9 @@
 import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore'
-import { db } from 'FirebaseConfig/config'
+import { db } from 'firebaseConfig/config'
 import { useEffect, useState } from 'react'
 
 export const useFireStore = (collectionName, condition) => {
-  /* ondition
+  /* condition
   {
     fieldName: 'abc'
     operator: '==='

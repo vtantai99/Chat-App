@@ -1,8 +1,8 @@
 import { Form, Input, Modal } from 'antd'
-import { AppContext } from 'Context/AppProvider'
-import { AuthContext } from 'Context/AuthProvider'
-import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
-import { addDocument } from 'FirebaseConfig/services'
+import { AppContext } from 'context/AppProvider'
+import { AuthContext } from 'context/AuthProvider'
+import { DB_FIRE_STORE } from 'firebaseConfig/constans'
+import { addDocument } from 'firebaseConfig/services'
 import React from 'react'
 import { useContext } from 'react'
 

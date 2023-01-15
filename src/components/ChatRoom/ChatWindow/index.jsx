@@ -1,6 +1,6 @@
 import { UserAddOutlined } from '@ant-design/icons'
 import { Avatar, Button, Form, Input, Tooltip } from 'antd'
-import { AppContext } from 'Context/AppProvider'
+import { AppContext } from 'context/AppProvider'
 import { useContext } from 'react'
 import Message from './Message'
 import

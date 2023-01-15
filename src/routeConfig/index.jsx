@@ -1,4 +1,4 @@
-import { LoginScreen, ChatRoom } from 'Components'
+import { LoginScreen, ChatRoom } from 'components'
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { ROUTES_NAME } from './constant'

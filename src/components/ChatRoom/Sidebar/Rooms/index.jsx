@@ -1,6 +1,6 @@
 import { PlusOutlined } from '@ant-design/icons'
 import { Button, Collapse } from 'antd'
-import { AppContext } from 'Context/AppProvider'
+import { AppContext } from 'context/AppProvider'
 import { useContext } from 'react'
 import { LinkStyled, PanelStyled } from './styled'
 

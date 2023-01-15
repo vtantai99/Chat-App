@@ -1,9 +1,9 @@
 import { Avatar, Button, Typography } from 'antd'
-import { AuthContext } from 'Context/AuthProvider'
+import { AuthContext } from 'context/AuthProvider'
 import { signOut } from 'firebase/auth'
 import { onSnapshot, collection } from 'firebase/firestore'
-import { auth, db } from 'FirebaseConfig/config'
-import { DB_FIRE_STORE } from 'FirebaseConfig/constans'
+import { auth, db } from 'firebaseConfig/config'
+import { DB_FIRE_STORE } from 'firebaseConfig/constans'
 import React, { useEffect, useContext } from 'react'
 import { UserWrapper } from './styled'
 

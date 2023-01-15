@@ -1,6 +1,6 @@
-import { AddRoomModal, InviteMemberModal } from 'Components'
+import { AddRoomModal, InviteMemberModal } from 'components'
 import React, { Fragment } from 'react'
-import AppRoute from 'Routes'
+import AppRoute from 'routeConfig'
 
 const App = () => {
   return (
